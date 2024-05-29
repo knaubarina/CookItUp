@@ -11,6 +11,7 @@
 		E7CCFD032C077332009E49DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFD022C077332009E49DB /* ContentView.swift */; };
 		E7CCFD052C077338009E49DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CCFD042C077338009E49DB /* Assets.xcassets */; };
 		E7CCFD082C077338009E49DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CCFD072C077338009E49DB /* Preview Assets.xcassets */; };
+		E7CCFD102C077F05009E49DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CCFD0F2C077F05009E49DB /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E7CCFD022C077332009E49DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7CCFD042C077338009E49DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7CCFD072C077338009E49DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E7CCFD0F2C077F05009E49DB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +53,9 @@
 		E7CCFCFF2C077332009E49DB /* CookItUp */ = {
 			isa = PBXGroup;
 			children = (
+				E7CCFD0E2C077EEF009E49DB /* Resources */,
 				E7CCFD002C077332009E49DB /* CookItUpApp.swift */,
 				E7CCFD022C077332009E49DB /* ContentView.swift */,
-				E7CCFD042C077338009E49DB /* Assets.xcassets */,
 				E7CCFD062C077338009E49DB /* Preview Content */,
 			);
 			path = CookItUp;
@@ -65,6 +67,15 @@
 				E7CCFD072C077338009E49DB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7CCFD0E2C077EEF009E49DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7CCFD042C077338009E49DB /* Assets.xcassets */,
+				E7CCFD0F2C077F05009E49DB /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7CCFD102C077F05009E49DB /* Colors.xcassets in Resources */,
 				E7CCFD082C077338009E49DB /* Preview Assets.xcassets in Resources */,
 				E7CCFD052C077338009E49DB /* Assets.xcassets in Resources */,
 			);
