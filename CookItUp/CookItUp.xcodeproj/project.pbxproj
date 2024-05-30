@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7A37E862C08A378005D3238 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E852C08A378005D3238 /* Typography.swift */; };
+		E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E892C08A73F005D3238 /* TypographyModifier.swift */; };
 		E7CCFD012C077332009E49DB /* CookItUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFD002C077332009E49DB /* CookItUpApp.swift */; };
 		E7CCFD032C077332009E49DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFD022C077332009E49DB /* ContentView.swift */; };
 		E7CCFD052C077338009E49DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CCFD042C077338009E49DB /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7A37E852C08A378005D3238 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		E7A37E892C08A73F005D3238 /* TypographyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyModifier.swift; sourceTree = "<group>"; };
 		E7CCFCFD2C077332009E49DB /* CookItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CCFD002C077332009E49DB /* CookItUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookItUpApp.swift; sourceTree = "<group>"; };
 		E7CCFD022C077332009E49DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +38,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7A37E832C08A323005D3238 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E7A37E852C08A378005D3238 /* Typography.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E7A37E842C08A345005D3238 /* CookItUpKit */ = {
+			isa = PBXGroup;
+			children = (
+				E7CCFD0E2C077EEF009E49DB /* Resources */,
+				E7A37E882C08A723005D3238 /* ViewModifiers */,
+				E7A37E832C08A323005D3238 /* Fonts */,
+			);
+			path = CookItUpKit;
+			sourceTree = "<group>";
+		};
+		E7A37E882C08A723005D3238 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E7A37E892C08A73F005D3238 /* TypographyModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		E7CCFCF42C077332009E49DB = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +83,7 @@
 		E7CCFCFF2C077332009E49DB /* CookItUp */ = {
 			isa = PBXGroup;
 			children = (
-				E7CCFD0E2C077EEF009E49DB /* Resources */,
+				E7A37E842C08A345005D3238 /* CookItUpKit */,
 				E7CCFD002C077332009E49DB /* CookItUpApp.swift */,
 				E7CCFD022C077332009E49DB /* ContentView.swift */,
 				E7CCFD062C077338009E49DB /* Preview Content */,
@@ -150,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7CCFD032C077332009E49DB /* ContentView.swift in Sources */,
+				E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */,
+				E7A37E862C08A378005D3238 /* Typography.swift in Sources */,
 				E7CCFD012C077332009E49DB /* CookItUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
