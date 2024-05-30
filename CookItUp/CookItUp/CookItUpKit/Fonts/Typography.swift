@@ -270,3 +270,9 @@ extension Text {
         return self.modifier(TypographyModifier(typography: typography))
     }
 }
+
+extension ButtonStyleConfiguration.Label {
+    func typography(_ typography: Typography) -> some View {
+        return self.modifier(TypographyModifier(typography: typography))
+    }
+}
