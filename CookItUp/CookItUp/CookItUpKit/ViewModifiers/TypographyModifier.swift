@@ -12,4 +12,3 @@ struct TypographyModifier: ViewModifier {
             .lineSpacing(typography.textStyle.lineSpacing)
     }
 }
-
