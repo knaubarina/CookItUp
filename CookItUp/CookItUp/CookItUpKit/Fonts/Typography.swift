@@ -265,7 +265,6 @@ private extension UIFont {
     }
 }
 
-
 extension Text {
     func typography(_ typography: Typography) -> some View {
         return self.modifier(TypographyModifier(typography: typography))
