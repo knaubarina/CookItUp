@@ -1,9 +1,4 @@
-//
-//  CookItUpApp.swift
-//  CookItUp
-//
 //  Created by Arina Knaub on 29/05/2024.
-//
 
 import SwiftUI
 
