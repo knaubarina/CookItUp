@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E73B9E102C09033900855BC4 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73B9E0F2C09033900855BC4 /* PrimaryButtonStyle.swift */; };
+		E79B6F342C09F57F00C7274C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6F332C09F57F00C7274C /* OnboardingView.swift */; };
 		E7A37E862C08A378005D3238 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E852C08A378005D3238 /* Typography.swift */; };
 		E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E892C08A73F005D3238 /* TypographyModifier.swift */; };
 		E7CCFD012C077332009E49DB /* CookItUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFD002C077332009E49DB /* CookItUpApp.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		E73B9E0F2C09033900855BC4 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		E79B6F332C09F57F00C7274C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E7A37E852C08A378005D3238 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		E7A37E892C08A73F005D3238 /* TypographyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyModifier.swift; sourceTree = "<group>"; };
 		E7CCFCFD2C077332009E49DB /* CookItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +56,22 @@
 				E73B9E0F2C09033900855BC4 /* PrimaryButtonStyle.swift */,
 			);
 			path = ButtonStyles;
+			sourceTree = "<group>";
+		};
+		E79B6F2F2C09F4C700C7274C /* AppScreens */ = {
+			isa = PBXGroup;
+			children = (
+				E79B6F302C09F54500C7274C /* Onboarding */,
+			);
+			path = AppScreens;
+			sourceTree = "<group>";
+		};
+		E79B6F302C09F54500C7274C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E79B6F332C09F57F00C7274C /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		E7A37E832C08A323005D3238 /* Fonts */ = {
@@ -102,6 +120,7 @@
 		E7CCFCFF2C077332009E49DB /* CookItUp */ = {
 			isa = PBXGroup;
 			children = (
+				E79B6F2F2C09F4C700C7274C /* AppScreens */,
 				E7A37E842C08A345005D3238 /* CookItUpKit */,
 				E7CCFD002C077332009E49DB /* CookItUpApp.swift */,
 				E7CCFD022C077332009E49DB /* ContentView.swift */,
@@ -198,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79B6F342C09F57F00C7274C /* OnboardingView.swift in Sources */,
 				E7CCFD032C077332009E49DB /* ContentView.swift in Sources */,
 				E73B9E102C09033900855BC4 /* PrimaryButtonStyle.swift in Sources */,
 				E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */,
