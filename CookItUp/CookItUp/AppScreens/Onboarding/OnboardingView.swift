@@ -5,6 +5,7 @@ import SwiftUI
 struct OnboardingView: View {
     
     @State private var currentSelection: Tab = .firstScreen
+    @AppStorage("didFinishOnboarding") var didFinishOnboarding = false
     
     init() {
         UIScrollView.appearance().bounces = false
@@ -47,7 +48,7 @@ struct OnboardingView: View {
                         if currentSelection != .thirdScreen {
                             currentSelection = Tab(rawValue: currentSelection.rawValue + 1)!
                         } else {
-                            // get started logic
+                            didFinishOnboarding = true
                         }
                     } label: {
                         Text(currentSelection != .thirdScreen ? "Continue" : "Let's Start!")

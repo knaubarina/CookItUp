@@ -4,9 +4,15 @@ import SwiftUI
 
 @main
 struct CookItUpApp: App {
+    @AppStorage("didFinishOnboarding") var didFinishOnboarding = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if didFinishOnboarding {
+                ContentView()
+            } else {
+                OnboardingView()
+            }
         }
     }
 }
