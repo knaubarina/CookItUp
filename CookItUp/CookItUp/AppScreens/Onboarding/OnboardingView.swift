@@ -26,18 +26,22 @@ struct OnboardingView: View {
                                 }
                         }
                     }
-                    .tabViewStyle(.page(indexDisplayMode: .never))
-                    .animation(.default, value: currentSelection)
                 }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .animation(.default, value: currentSelection)
+                
                 
                 VStack(spacing: 24) {
                     Spacer()
                     Text(currentSelection.title)
                         .typography(.title)
+                        .allowsHitTesting(false)
                     Text(currentSelection.description)
                         .typography(.headline)
+                        .allowsHitTesting(false)
                     
-                    PageControl(currentPage: $currentSelection, numberOfPages: Tab.allCases.count)
+                    PageControl(currentPage: $currentSelection,
+                                numberOfPages: Tab.allCases.count)
                     
                     Button {
                         if currentSelection != .thirdScreen {

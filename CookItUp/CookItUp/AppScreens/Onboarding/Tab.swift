@@ -27,7 +27,7 @@ enum Tab: Int, CaseIterable, Identifiable {
         case .firstScreen:
             return "Personal Recipe Collection"
         case .secondScreen:
-            return "Modify servings to adjust ingredient amounts"
+            return "Nutrition Tracking with Energy Value"
         case .thirdScreen:
             return "Step-by-Step Recipe Guide"
         }
@@ -38,7 +38,7 @@ enum Tab: Int, CaseIterable, Identifiable {
         case .firstScreen:
             return "Add your favourite recipes to the profile for easy access."
         case .secondScreen:
-            return "Set the required number of servings and the ingredients will change automatically."
+            return "Monitor recipe nutrition with detailed tracking of calories, carbs, proteins, and fats."
         case .thirdScreen:
             return "Follow the recipe step-by-step during cooking, utilizing the user-friendly interface."
         }
