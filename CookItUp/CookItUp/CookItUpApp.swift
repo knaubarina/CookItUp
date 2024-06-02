@@ -4,9 +4,19 @@ import SwiftUI
 
 @main
 struct CookItUpApp: App {
+    @AppStorage("didFinishOnboarding") var didFinishOnboarding = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                if didFinishOnboarding {
+                    ContentView()
+                        .transition(.asymmetric(insertion: .push(from: .bottom), removal: .push(from: .top)))
+                } else {
+                    OnboardingView()
+                }
+            }
+            .animation(.easeInOut, value: didFinishOnboarding)
         }
     }
 }

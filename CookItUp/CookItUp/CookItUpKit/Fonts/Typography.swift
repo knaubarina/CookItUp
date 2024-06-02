@@ -41,8 +41,8 @@ enum Typography {
             
         case .buttons:
             return TextStyle(
-                font: .buttons(withSize: 17),
-                lineSpacing: lineSpacing(font: .buttons(withSize: 17), desiredLineHeight: 22)
+                font: .buttons(withSize: 16),
+                lineSpacing: lineSpacing(font: .buttons(withSize: 16), desiredLineHeight: 22)
             )
             
         case .headline:
@@ -138,7 +138,7 @@ private extension Font {
     }
     
     static func buttons(withSize size: CGFloat) -> Font {
-        let font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: size, weight: .bold))
+        let font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: size, weight: .medium))
         return Font(font as CTFont)
     }
     
@@ -210,7 +210,7 @@ private extension UIFont {
     }
     
     static func buttons(withSize size: CGFloat) -> UIFont {
-        let font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: size, weight: .bold))
+        let font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: size, weight: .medium))
         return font
     }
     

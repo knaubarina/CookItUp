@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E73B9E102C09033900855BC4 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73B9E0F2C09033900855BC4 /* PrimaryButtonStyle.swift */; };
+		E79B6F372C0A2A4600C7274C /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6F362C0A2A4600C7274C /* PageControl.swift */; };
+		E79B6F392C0A469000C7274C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6F382C0A469000C7274C /* Tab.swift */; };
+		E79B6F3B2C0A48BD00C7274C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6F3A2C0A48BD00C7274C /* OnboardingView.swift */; };
 		E74AB5AE2C0BA1F200063BB8 /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74AB5AD2C0BA1F200063BB8 /* RecipeCardView.swift */; };
 		E7A37E862C08A378005D3238 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E852C08A378005D3238 /* Typography.swift */; };
 		E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E892C08A73F005D3238 /* TypographyModifier.swift */; };
@@ -22,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		E73B9E0F2C09033900855BC4 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		E74AB5AB2C0B912300063BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E79B6F362C0A2A4600C7274C /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		E79B6F382C0A469000C7274C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		E79B6F3A2C0A48BD00C7274C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E74AB5AD2C0BA1F200063BB8 /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		E7A37E852C08A378005D3238 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		E7A37E892C08A73F005D3238 /* TypographyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyModifier.swift; sourceTree = "<group>"; };
@@ -62,6 +69,31 @@
 			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
+		E79B6F2F2C09F4C700C7274C /* AppScreens */ = {
+			isa = PBXGroup;
+			children = (
+				E79B6F302C09F54500C7274C /* Onboarding */,
+			);
+			path = AppScreens;
+			sourceTree = "<group>";
+		};
+		E79B6F302C09F54500C7274C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E79B6F382C0A469000C7274C /* Tab.swift */,
+				E79B6F3A2C0A48BD00C7274C /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E79B6F352C0A2A3100C7274C /* PageControls */ = {
+			isa = PBXGroup;
+			children = (
+				E79B6F362C0A2A4600C7274C /* PageControl.swift */,
+			);
+			path = PageControls;
+			sourceTree = "<group>";
+		};
 		E74AB5AC2C0BA1D300063BB8 /* RecipeCard */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +114,7 @@
 		E7A37E842C08A345005D3238 /* CookItUpKit */ = {
 			isa = PBXGroup;
 			children = (
+				E79B6F352C0A2A3100C7274C /* PageControls */,
 				E74AB5AC2C0BA1D300063BB8 /* RecipeCard */,
 				E73B9E0D2C0902FC00855BC4 /* Buttons */,
 				E7CCFD0E2C077EEF009E49DB /* Resources */,
@@ -143,6 +176,8 @@
 		E7CCFCFF2C077332009E49DB /* CookItUp */ = {
 			isa = PBXGroup;
 			children = (
+				E74AB5AB2C0B912300063BB8 /* Info.plist */,
+				E79B6F2F2C09F4C700C7274C /* AppScreens */,
 				E7A37E842C08A345005D3238 /* CookItUpKit */,
 				E7CCFD002C077332009E49DB /* CookItUpApp.swift */,
 				E7CCFD022C077332009E49DB /* ContentView.swift */,
@@ -239,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79B6F3B2C0A48BD00C7274C /* OnboardingView.swift in Sources */,
 				E7CCFD032C077332009E49DB /* ContentView.swift in Sources */,
 				E73B9E102C09033900855BC4 /* PrimaryButtonStyle.swift in Sources */,
+				E79B6F392C0A469000C7274C /* Tab.swift in Sources */,
+				E79B6F372C0A2A4600C7274C /* PageControl.swift in Sources */,
 				E74AB5AE2C0BA1F200063BB8 /* RecipeCardView.swift in Sources */,
 				E7C42AB42C0CC1BC0099B5B0 /* RecipeCardInfoView.swift in Sources */,
 				E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */,
@@ -383,9 +421,9 @@
 				DEVELOPMENT_TEAM = 7AGK2G58Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CookItUp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,9 +450,9 @@
 				DEVELOPMENT_TEAM = 7AGK2G58Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CookItUp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
