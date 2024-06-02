@@ -18,11 +18,12 @@
 		E7CCFD052C077338009E49DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CCFD042C077338009E49DB /* Assets.xcassets */; };
 		E7CCFD082C077338009E49DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CCFD072C077338009E49DB /* Preview Assets.xcassets */; };
 		E7CCFD102C077F05009E49DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CCFD0F2C077F05009E49DB /* Colors.xcassets */; };
+		E7E8682A2C0CFA8C009B211D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E868292C0CFA8C009B211D /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E73B9E0F2C09033900855BC4 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
-		E74AB5AB2C0B912300063BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E74AB5AB2C0B912300063BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E79B6F362C0A2A4600C7274C /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		E79B6F382C0A469000C7274C /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		E79B6F3A2C0A48BD00C7274C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		E7CCFD042C077338009E49DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7CCFD072C077338009E49DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7CCFD0F2C077F05009E49DB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E7E868292C0CFA8C009B211D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,11 +137,12 @@
 		E7CCFCFF2C077332009E49DB /* CookItUp */ = {
 			isa = PBXGroup;
 			children = (
-				E74AB5AB2C0B912300063BB8 /* Info.plist */,
+				E7E8681F2C0CF9BF009B211D /* Features */,
+				E7E8681E2C0CF9AA009B211D /* App */,
 				E79B6F2F2C09F4C700C7274C /* AppScreens */,
 				E7A37E842C08A345005D3238 /* CookItUpKit */,
-				E7CCFD002C077332009E49DB /* CookItUpApp.swift */,
 				E7CCFD022C077332009E49DB /* ContentView.swift */,
+				E7E8681D2C0CF907009B211D /* Supporting Files */,
 				E7CCFD062C077338009E49DB /* Preview Content */,
 			);
 			path = CookItUp;
@@ -160,6 +163,102 @@
 				E7CCFD0F2C077F05009E49DB /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E7E8681D2C0CF907009B211D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E74AB5AB2C0B912300063BB8 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7E8681E2C0CF9AA009B211D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E7CCFD002C077332009E49DB /* CookItUpApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E7E8681F2C0CF9BF009B211D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E7E868202C0CFA0C009B211D /* Home */,
+				E7E868232C0CFA19009B211D /* Profile */,
+				E7E868222C0CFA14009B211D /* Favorites */,
+				E7E868212C0CFA10009B211D /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E7E868202C0CFA0C009B211D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E7E868242C0CFA36009B211D /* Screens */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E7E868212C0CFA10009B211D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E7E868272C0CFA44009B211D /* Screens */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E7E868222C0CFA14009B211D /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				E7E868262C0CFA41009B211D /* Screens */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		E7E868232C0CFA19009B211D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E7E868252C0CFA3C009B211D /* Screens */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E7E868242C0CFA36009B211D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E7E868282C0CFA52009B211D /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E7E868252C0CFA3C009B211D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E7E868262C0CFA41009B211D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E7E868272C0CFA44009B211D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E7E868282C0CFA52009B211D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E7E868292C0CFA8C009B211D /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E8682A2C0CFA8C009B211D /* HomeView.swift in Sources */,
 				E79B6F3B2C0A48BD00C7274C /* OnboardingView.swift in Sources */,
 				E7CCFD032C077332009E49DB /* ContentView.swift in Sources */,
 				E73B9E102C09033900855BC4 /* PrimaryButtonStyle.swift in Sources */,
@@ -377,7 +477,7 @@
 				DEVELOPMENT_TEAM = 7AGK2G58Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CookItUp/Info.plist;
+				INFOPLIST_FILE = "CookItUp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -406,7 +506,7 @@
 				DEVELOPMENT_TEAM = 7AGK2G58Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CookItUp/Info.plist;
+				INFOPLIST_FILE = "CookItUp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
