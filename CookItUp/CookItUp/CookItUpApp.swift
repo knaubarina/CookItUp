@@ -8,11 +8,15 @@ struct CookItUpApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if didFinishOnboarding {
-                ContentView()
-            } else {
-                OnboardingView()
+            ZStack {
+                if didFinishOnboarding {
+                    ContentView()
+                        .transition(.asymmetric(insertion: .push(from: .bottom), removal: .push(from: .top)))
+                } else {
+                    OnboardingView()
+                }
             }
+            .animation(.easeInOut, value: didFinishOnboarding)
         }
     }
 }

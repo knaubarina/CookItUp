@@ -31,7 +31,6 @@ struct OnboardingView: View {
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .animation(.default, value: currentSelection)
                 
-                
                 VStack(spacing: 24) {
                     Spacer()
                     Text(currentSelection.title)
