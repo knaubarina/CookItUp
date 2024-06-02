@@ -7,7 +7,7 @@ struct PrimaryButtonStyle: ButtonStyle {
         configuration.label
             .typography(.buttons)
             .foregroundStyle(.neutral01)
-            .frame(maxWidth: 175, maxHeight: 42)
+            .frame(maxWidth: 175, maxHeight: 48)
             .background(configuration.isPressed ? .primary01 : .primary02)
             .clipShape(RoundedRectangle(cornerRadius: 8))
             .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
