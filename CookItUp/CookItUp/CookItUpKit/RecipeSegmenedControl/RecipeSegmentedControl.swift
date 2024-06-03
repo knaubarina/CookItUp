@@ -27,7 +27,7 @@ struct RecipeSegmentedControl: View {
                     }
                 }
                 .onTapGesture {
-                    withAnimation(.spring()) {
+                    withAnimation(.spring) {
                         selectedFilter = filter
                     }
                 }
@@ -36,49 +36,6 @@ struct RecipeSegmentedControl: View {
         .padding(.horizontal, 16)
     }
 }
-
-
-//struct RecipeSegmentedControl: View {
-//
-//    @State private var selectedFilter: RecipeSegmentedControlFilter = .allRecipes
-//    @Namespace var animation
-//    
-//    var body: some View {
-//        VStack {
-//            HStack(spacing: 0) {
-//                ForEach(RecipeSegmentedControlFilter.allCases) { filter in
-//                    Button {
-//                        selectedFilter = filter
-//                    } label: {
-//                        VStack {
-//                            Text(filter.title)
-//                                .typography(.subheadline2)
-//                                .foregroundColor(selectedFilter == filter ? .neutral05 : .neutral03)
-//                            
-//                            ZStack {
-//                                Capsule()
-//                                    .fill(.neutral01)
-//                                    .frame(height: 1)
-//                                if selectedFilter == filter {
-//                                    Capsule()
-//                                        .fill(.neutral05)
-//                                        .frame(height: 1)
-//                                        .matchedGeometryEffect(id: "item", in: animation)
-//                                }
-//                            }
-//                        }
-//                        .onTapGesture {
-//                            withAnimation(.spring) {
-//                                selectedFilter = filter
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        .padding(.horizontal, 16)
-//    }
-//}
 
 #Preview {
     RecipeSegmentedControl()

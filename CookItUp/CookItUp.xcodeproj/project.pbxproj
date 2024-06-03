@@ -144,7 +144,7 @@
 		E7ACF0822C0DD6C5000A8B4F /* RecipeSegmenedControl */ = {
 			isa = PBXGroup;
 			children = (
-				E7ACF0872C0E3A42000A8B4F /* Model */,
+				E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */,
 				E7ACF0832C0DD6E7000A8B4F /* RecipeSegmentedControl.swift */,
 			);
 			path = RecipeSegmenedControl;
@@ -164,14 +164,6 @@
 				E79B6F302C09F54500C7274C /* Onboarding */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		E7ACF0872C0E3A42000A8B4F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E7C42AAF2C0CC1660099B5B0 /* ReusableViews */ = {

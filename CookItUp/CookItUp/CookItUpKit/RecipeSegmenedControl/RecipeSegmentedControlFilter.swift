@@ -16,6 +16,9 @@ enum RecipeSegmentedControlFilter: Int, CaseIterable, Identifiable {
         case .dinner: return "Dinner"
         }
     }
-    var id: Int { return self.rawValue }
+
+    var id: Self {
+        return self
+    }
 }
 
