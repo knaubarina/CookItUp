@@ -2,12 +2,12 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct FavoritesView: View {
     var body: some View {
-        Text("Home View!")
+        Text("Favorites View!")
     }
 }
 
 #Preview {
-    HomeView()
+    FavoritesView()
 }

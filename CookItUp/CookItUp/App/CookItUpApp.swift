@@ -10,7 +10,7 @@ struct CookItUpApp: App {
         WindowGroup {
             ZStack {
                 if didFinishOnboarding {
-                    ContentView()
+                    TabBarView()
                         .transition(.asymmetric(insertion: .push(from: .bottom), removal: .push(from: .top)))
                 } else {
                     OnboardingView()

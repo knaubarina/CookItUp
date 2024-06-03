@@ -2,12 +2,12 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct SearchView: View {
     var body: some View {
-        Text("Home View!")
+        Text("Search View!")
     }
 }
 
 #Preview {
-    HomeView()
+    SearchView()
 }

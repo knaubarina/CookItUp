@@ -53,11 +53,11 @@ struct OnboardingView: View {
                         Text(currentSelection != .thirdScreen ? "Continue" : "Let's Start!")
                     }
                     .buttonStyle(.primary)
-                    .padding()
                 }
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.neutral01)
-                .padding()
+                .padding(.bottom, 46)
+                .padding(.horizontal)
             }
             .ignoresSafeArea()
             .toolbar {
