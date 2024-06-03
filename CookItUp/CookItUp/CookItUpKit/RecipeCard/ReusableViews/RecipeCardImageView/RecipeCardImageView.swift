@@ -5,7 +5,7 @@ import SwiftUI
 struct RecipeCardImageView: View {
     var body: some View {
         ZStack(alignment: .top) {
-            Image(uiImage: .recipePicture1)
+            Image(.recipePicture1)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 219)
@@ -28,7 +28,7 @@ struct RecipeCardImageView: View {
                     Button {
                         // logic add to fav
                     } label: {
-                        Image(uiImage: .favoritesInactiveCard)
+                        Image(.favoritesInactiveCard)
                     }
                 }
                 

@@ -6,7 +6,7 @@ struct RecipeCardInfoView: View {
     var body: some View {
         HStack(spacing: 12) {
             HStack(spacing: 8) {
-                Image(uiImage: .timer)
+                Image(.timer)
                     .resizable()
                     .frame(width: 16, height: 16)
                 Text("30 min")
@@ -17,7 +17,7 @@ struct RecipeCardInfoView: View {
                 .frame(width: 1, height: 24)
             
             HStack(spacing: 8) {
-                Image(uiImage: .complexity)
+                Image(.complexity)
                     .resizable()
                     .frame(width: 16, height: 16)
                 Text("Easy")
@@ -28,7 +28,7 @@ struct RecipeCardInfoView: View {
                 .frame(width: 1, height: 24)
             
             HStack(spacing: 8) {
-                Image(uiImage: .servings)
+                Image(.servings)
                     .resizable()
                     .frame(width: 16, height: 16)
                 Text("2 sv")
@@ -39,7 +39,7 @@ struct RecipeCardInfoView: View {
                 .frame(width: 1, height: 24)
             
             HStack(spacing: 8) {
-                Image(uiImage: .calories)
+                Image(.calories)
                     .resizable()
                     .frame(width: 16, height: 16)
                 Text("938 Cal")
