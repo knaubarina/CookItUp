@@ -8,22 +8,22 @@ struct RecipeSegmentedControl: View {
     @Namespace var animation
     
     var body: some View {
-        HStack {
+        HStack(spacing: 12) {
             ForEach(RecipeSegmentedControlFilter.allCases) { filter in
-                VStack {
+                VStack(spacing: 16) {
                     Text(filter.title)
-                        .typography(.subheadline2)
+                        .typography(.subheadline1)
                         .foregroundStyle(selectedFilter == filter ? .neutral05 : .neutral03)
                     
                     if selectedFilter == filter {
-                        Rectangle()
+                        Capsule()
                             .foregroundStyle(.neutral05)
-                            .frame(height: 1)
+                            .frame(height: 2)
                             .matchedGeometryEffect(id: "item", in: animation)
                     } else {
-                        Rectangle()
+                        Capsule()
                             .foregroundStyle(.clear)
-                            .frame(height: 1)
+                            .frame(height: 2)
                     }
                 }
                 .onTapGesture {
@@ -33,7 +33,8 @@ struct RecipeSegmentedControl: View {
                 }
             }
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal)
+        .padding(.top)
     }
 }
 

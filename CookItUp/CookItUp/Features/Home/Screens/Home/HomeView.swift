@@ -3,8 +3,31 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    
     var body: some View {
-        Text("Home View!")
+        NavigationStack {
+                RecipeSegmentedControl()
+            ZStack(alignment: .bottom) {
+                ScrollView {
+                    LazyVStack(spacing: 16) {
+                        ForEach(1...5, id: \.self) { listing in
+                            RecipeCardView()
+                        }
+                    }
+                    .padding(.top, 12)
+                    .padding(.bottom, 28)
+                }
+                
+                Button {
+                    // add recipe logic
+                } label: {
+                    Text("Add +")
+                }
+                .buttonStyle(.tertiary)
+                .padding()
+            }
+        }
     }
 }
 
