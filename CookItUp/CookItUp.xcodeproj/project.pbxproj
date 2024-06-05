@@ -17,6 +17,7 @@
 		E7ACF0842C0DD6E7000A8B4F /* RecipeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACF0832C0DD6E7000A8B4F /* RecipeSegmentedControl.swift */; };
 		E7ACF0892C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */; };
 		E7ACF08B2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACF08A2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift */; };
+		E7AEB4A22C10BE0D00AA3FB2 /* RecipeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEB4A12C10BE0D00AA3FB2 /* RecipeSelectionView.swift */; };
 		E7C42AB22C0CC18B0099B5B0 /* RecipeCardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C42AB12C0CC18B0099B5B0 /* RecipeCardImageView.swift */; };
 		E7C42AB42C0CC1BC0099B5B0 /* RecipeCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C42AB32C0CC1BC0099B5B0 /* RecipeCardInfoView.swift */; };
 		E7CCFD012C077332009E49DB /* CookItUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFD002C077332009E49DB /* CookItUpApp.swift */; };
@@ -44,6 +45,7 @@
 		E7ACF0832C0DD6E7000A8B4F /* RecipeSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSegmentedControl.swift; sourceTree = "<group>"; };
 		E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSegmentedControlFilter.swift; sourceTree = "<group>"; };
 		E7ACF08A2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryButtonStyle.swift; sourceTree = "<group>"; };
+		E7AEB4A12C10BE0D00AA3FB2 /* RecipeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSelectionView.swift; sourceTree = "<group>"; };
 		E7C42AB12C0CC18B0099B5B0 /* RecipeCardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardImageView.swift; sourceTree = "<group>"; };
 		E7C42AB32C0CC1BC0099B5B0 /* RecipeCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardInfoView.swift; sourceTree = "<group>"; };
 		E7CCFCFD2C077332009E49DB /* CookItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,15 +91,6 @@
 			sourceTree = "<group>";
 		};
 		E74AB5AC2C0BA1D300063BB8 /* RecipeCard */ = {
-			isa = PBXGroup;
-			children = (
-				E7C42AAF2C0CC1660099B5B0 /* ReusableViews */,
-				E74AB5AD2C0BA1F200063BB8 /* RecipeCardView.swift */,
-			);
-			path = RecipeCard;
-			sourceTree = "<group>";
-		};
-		E79B6F2F2C09F4C700C7274C /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
 				E7C42AAF2C0CC1660099B5B0 /* ReusableViews */,
@@ -157,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */,
+				E7AEB4A12C10BE0D00AA3FB2 /* RecipeSelectionView.swift */,
 				E7ACF0832C0DD6E7000A8B4F /* RecipeSegmentedControl.swift */,
 			);
 			path = RecipeSegmenedControl;
@@ -477,6 +471,7 @@
 				E7ACF0842C0DD6E7000A8B4F /* RecipeSegmentedControl.swift in Sources */,
 				E7A37E862C08A378005D3238 /* Typography.swift in Sources */,
 				E7E868372C0CFBFF009B211D /* SearchView.swift in Sources */,
+				E7AEB4A22C10BE0D00AA3FB2 /* RecipeSelectionView.swift in Sources */,
 				E7E868342C0CFBEE009B211D /* FavoritesView.swift in Sources */,
 				E7E8682E2C0CFB73009B211D /* TabBarView.swift in Sources */,
 				E7E868312C0CFBBC009B211D /* ProfileView.swift in Sources */,

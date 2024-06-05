@@ -3,20 +3,18 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    
     var body: some View {
         NavigationStack {
-                RecipeSegmentedControl()
+            RecipeSegmentedControl()
             ZStack(alignment: .bottom) {
                 ScrollView {
-                    LazyVStack(spacing: 16) {
+                    LazyVStack(alignment: .center, spacing: 16) {
                         ForEach(1...5, id: \.self) { listing in
                             RecipeCardView()
                         }
                     }
                     .padding(.top, 12)
-                    .padding(.bottom, 28)
+                    .padding(.bottom, 80)
                 }
                 
                 Button {

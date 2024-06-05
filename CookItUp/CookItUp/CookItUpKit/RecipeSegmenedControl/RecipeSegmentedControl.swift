@@ -3,42 +3,49 @@
 import SwiftUI
 
 struct RecipeSegmentedControl: View {
-    
-    @State private var selectedFilter: RecipeSegmentedControlFilter = .allRecipes
-    @Namespace var animation
+    @State private var recipeSelection: RecipeSelection = .allRecipes
+    @State private var tabSelection: RecipeSelection = .allRecipes
+    @State private var recipeSelectionViewScrollTarget: RecipeSelection = .allRecipes
     
     var body: some View {
-        HStack(spacing: 12) {
-            ForEach(RecipeSegmentedControlFilter.allCases) { filter in
-                VStack(spacing: 16) {
-                    Text(filter.title)
-                        .typography(.subheadline1)
-                        .foregroundStyle(selectedFilter == filter ? .neutral05 : .neutral03)
-                    
-                    if selectedFilter == filter {
-                        Capsule()
-                            .foregroundStyle(.neutral05)
-                            .frame(height: 2)
-                            .matchedGeometryEffect(id: "item", in: animation)
-                    } else {
-                        Capsule()
-                            .foregroundStyle(.clear)
-                            .frame(height: 2)
-                    }
+        VStack {
+            RecipeSelectionView(
+                recipeSelection: $recipeSelection,
+                scrollTarget: $recipeSelectionViewScrollTarget
+            )
+            
+            TabView(selection: $tabSelection) {
+                Text("First Screen")
+                    .tag(RecipeSelection.allRecipes)
+                
+                Text("Second Screen")
+                    .tag(RecipeSelection.breakfast)
+                
+                Text("Third Screen")
+                    .tag(RecipeSelection.lunch)
+                
+                Text("Fourth Screen")
+                    .tag(RecipeSelection.dinner)
+                
+                Text("Fifth Screen")
+                    .tag(RecipeSelection.dessert)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .onChange(of: tabSelection) { _, newValue in
+                withAnimation(.spring) {
+                    recipeSelection = newValue
+                    recipeSelectionViewScrollTarget = newValue
                 }
-                .onTapGesture {
-                    withAnimation(.spring) {
-                        selectedFilter = filter
-                    }
+            }
+            .onChange(of: recipeSelection) { _, newValue in
+                withAnimation {
+                    tabSelection = newValue
                 }
             }
         }
-        .padding(.horizontal)
-        .padding(.top)
     }
 }
 
 #Preview {
     RecipeSegmentedControl()
 }
-
