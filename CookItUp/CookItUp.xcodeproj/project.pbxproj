@@ -19,6 +19,7 @@
 		E7ACF08B2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACF08A2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift */; };
 		E7AEB49A2C0F3F9E00AA3FB2 /* RecipeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEB4992C0F3F9E00AA3FB2 /* RecipeInfoView.swift */; };
 		E7AEB49C2C0F4DFE00AA3FB2 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEB49B2C0F4DFE00AA3FB2 /* SecondaryButtonStyle.swift */; };
+		E7AEB4B72C10C93C00AA3FB2 /* NavigationBarIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEB4B62C10C93C00AA3FB2 /* NavigationBarIcons.swift */; };
 		E7C42AB22C0CC18B0099B5B0 /* RecipeCardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C42AB12C0CC18B0099B5B0 /* RecipeCardImageView.swift */; };
 		E7C42AB42C0CC1BC0099B5B0 /* RecipeCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C42AB32C0CC1BC0099B5B0 /* RecipeCardInfoView.swift */; };
 		E7CCFD012C077332009E49DB /* CookItUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CCFD002C077332009E49DB /* CookItUpApp.swift */; };
@@ -48,6 +49,7 @@
 		E7ACF08A2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryButtonStyle.swift; sourceTree = "<group>"; };
 		E7AEB4992C0F3F9E00AA3FB2 /* RecipeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoView.swift; sourceTree = "<group>"; };
 		E7AEB49B2C0F4DFE00AA3FB2 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
+		E7AEB4B62C10C93C00AA3FB2 /* NavigationBarIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarIcons.swift; sourceTree = "<group>"; };
 		E7C42AB12C0CC18B0099B5B0 /* RecipeCardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardImageView.swift; sourceTree = "<group>"; };
 		E7C42AB32C0CC1BC0099B5B0 /* RecipeCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardInfoView.swift; sourceTree = "<group>"; };
 		E7CCFCFD2C077332009E49DB /* CookItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 		E7AEB4962C0F3F6500AA3FB2 /* RecipeInfo */ = {
 			isa = PBXGroup;
 			children = (
+				E7AEB4B42C10C91900AA3FB2 /* ReusableViews */,
 				E7AEB4972C0F3F6E00AA3FB2 /* Screens */,
 			);
 			path = RecipeInfo;
@@ -196,6 +199,22 @@
 				E7AEB4992C0F3F9E00AA3FB2 /* RecipeInfoView.swift */,
 			);
 			path = RecipeInfo;
+			sourceTree = "<group>";
+		};
+		E7AEB4B42C10C91900AA3FB2 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				E7AEB4B52C10C92E00AA3FB2 /* NavigationBarIcons */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		E7AEB4B52C10C92E00AA3FB2 /* NavigationBarIcons */ = {
+			isa = PBXGroup;
+			children = (
+				E7AEB4B62C10C93C00AA3FB2 /* NavigationBarIcons.swift */,
+			);
+			path = NavigationBarIcons;
 			sourceTree = "<group>";
 		};
 		E7C42AAF2C0CC1660099B5B0 /* ReusableViews */ = {
@@ -496,6 +515,7 @@
 				E7C42AB42C0CC1BC0099B5B0 /* RecipeCardInfoView.swift in Sources */,
 				E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */,
 				E7C42AB22C0CC18B0099B5B0 /* RecipeCardImageView.swift in Sources */,
+				E7AEB4B72C10C93C00AA3FB2 /* NavigationBarIcons.swift in Sources */,
 				E7ACF0842C0DD6E7000A8B4F /* RecipeSegmentedControl.swift in Sources */,
 				E7A37E862C08A378005D3238 /* Typography.swift in Sources */,
 				E7E868372C0CFBFF009B211D /* SearchView.swift in Sources */,

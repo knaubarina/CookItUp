@@ -16,7 +16,6 @@ struct RecipeInfoView: View {
     ]
     
     var body: some View {
-        NavigationStack {
             ScrollView(showsIndicators: false) {
                 ZStack {
                     TabView {
@@ -26,41 +25,7 @@ struct RecipeInfoView: View {
                                 .scaledToFill()
                         }
                     }
-                    VStack {
-                        HStack(spacing: 16) {
-                            Button {
-                                // back logic
-                            } label: {
-                                Image(.back)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 30, height: 30)
-                            }
-                            
-                            Spacer()
-                            
-                            Button {
-                                // share recipe logic
-                            } label: {
-                                Image(.share)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 30, height: 30)
-                            }
-                            
-                            Button {
-                                // add to fav logic
-                            } label: {
-                                Image(.addToFavorites)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 30, height: 30)
-                            }
-                        }
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    .padding(.top, 60)
+                    NavigationBarIcons()
                 }
                 .frame(height: 300)
                 .tabViewStyle(.page)
@@ -69,13 +34,11 @@ struct RecipeInfoView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Cottage Cheese Pancakes With Berries & Sour Cream")
                             .typography(.title)
-                            .foregroundStyle(.neutral05)
                         
-                        Text("The main secret of perfect cottage cheese pancakes is to strain the quark, ensuring a smoother texture and removing excess moisture. This process enhances the fluffiness of the pancakes and prevents them from becoming too dense.")
-                            .typography(.body2)
-                            .foregroundStyle(.neutral05)
+                        ExpandableText()
                     }
-                    
+                    .foregroundStyle(.neutral05)
+
                     RecipeCardInfoView()
                         .frame(height: 40)
                         .shadow(color: .neutral05.opacity(0.04), radius: 4, y: 4)
@@ -97,7 +60,9 @@ struct RecipeInfoView: View {
                                 .typography(.subheadline2)
                                 .foregroundStyle(.neutral03)
                         }
+                        
                         Spacer()
+                        
                         Button {
                             // open ingredients sheet
                         } label: {
@@ -136,9 +101,8 @@ struct RecipeInfoView: View {
                 .padding(.horizontal)
             }
             .ignoresSafeArea()
-        }
         Button {
-            
+            // let's cook logic
         } label: {
             Text("Let's Cook!")
         }
@@ -148,4 +112,32 @@ struct RecipeInfoView: View {
 
 #Preview {
     RecipeInfoView()
+}
+
+struct ExpandableText:  View {
+    
+    @State private var isExpanded: Bool = false
+    
+    var body: some View {
+        VStack {
+            Text("The main secret of perfect cottage cheese pancakes is to strain the quark, ensuring a smoother texture and removing excess moisture. This process enhances the fluffiness of the pancakes and prevents them from becoming too dense.")
+                .lineLimit(isExpanded ? nil : 3)
+                .overlay(
+                    GeometryReader { proxy in
+                        Button(action: {
+                                isExpanded.toggle()
+                        }) {
+                            Text(isExpanded ? "" : "... Show more")
+                                .typography(.body2)
+                                .foregroundStyle(.primary03)
+                                .underline()
+                                .padding(.leading, 8)
+                                .padding(.top, 4)
+                                .background(.white)
+                        }
+                        .frame(width: proxy.size.width, height: proxy.size.height, alignment: .bottomTrailing)
+                    }
+                )
+        }
+    }
 }
