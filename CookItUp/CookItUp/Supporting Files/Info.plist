@@ -36,5 +36,7 @@
 		<key>UISceneConfigurations</key>
 		<dict/>
 	</dict>
+	<key>CFBundleDisplayName</key>
+	<string>$(BUNDLE_NAME)</string>
 </dict>
 </plist>
