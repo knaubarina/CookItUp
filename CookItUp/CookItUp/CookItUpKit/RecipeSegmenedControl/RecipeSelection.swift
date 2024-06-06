@@ -2,11 +2,12 @@
 
 import SwiftUI
 
-enum RecipeSegmentedControlFilter: Int, CaseIterable, Identifiable {
+enum RecipeSelection: CaseIterable, Identifiable {
     case allRecipes
     case breakfast
     case lunch
     case dinner
+    case dessert
     
     var title: String {
         switch self {
@@ -14,6 +15,7 @@ enum RecipeSegmentedControlFilter: Int, CaseIterable, Identifiable {
         case .breakfast: return "Breakfast"
         case .lunch: return "Lunch"
         case .dinner: return "Dinner"
+        case .dessert: return "Dessert"
         }
     }
 
