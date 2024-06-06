@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct DessertView: View {
+struct AllRecipesView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
@@ -11,9 +11,11 @@ struct DessertView: View {
                 }
             }
         }
+        .safeAreaPadding(.top, 16)
+        .safeAreaPadding(.bottom, 80)
     }
 }
 
 #Preview {
-    DessertView()
+    AllRecipesView()
 }

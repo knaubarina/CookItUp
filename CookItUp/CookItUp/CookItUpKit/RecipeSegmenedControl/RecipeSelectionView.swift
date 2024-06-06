@@ -13,7 +13,7 @@ struct RecipeSelectionView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .bottom, spacing: 28) {
                     ForEach(RecipeSelection.allCases) { recipe in
-                        VStack(spacing: 12) {
+                        VStack(spacing: 16) {
                             Text(recipe.title)
                                 .typography(.subheadline1)
                                 .foregroundStyle(recipeSelection == recipe ? .neutral05 : .neutral03)

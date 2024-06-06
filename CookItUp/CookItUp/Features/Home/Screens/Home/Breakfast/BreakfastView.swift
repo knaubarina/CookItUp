@@ -11,6 +11,8 @@ struct BreakfastView: View {
                 }
             }
         }
+        .safeAreaPadding(.top, 16)
+        .safeAreaPadding(.bottom, 80)
     }
 }
 

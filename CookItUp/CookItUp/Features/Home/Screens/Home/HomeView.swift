@@ -8,40 +8,43 @@ struct HomeView: View {
     @State private var recipeSelectionViewScrollTarget: RecipeSelection = .allRecipes
     
     var body: some View {
-        VStack {
-            RecipeSelectionView(
-                recipeSelection: $recipeSelection,
-                scrollTarget: $recipeSelectionViewScrollTarget
-            )
-            
-            TabView(selection: $tabSelection) {
-                Text("First Screen")
-                    .tag(RecipeSelection.allRecipes)
+        NavigationStack {
+            VStack {
+                RecipeSelectionView(
+                    recipeSelection: $recipeSelection,
+                    scrollTarget: $recipeSelectionViewScrollTarget
+                )
                 
-                Text("Second Screen")
-                    .tag(RecipeSelection.breakfast)
-                
-                Text("Third Screen")
-                    .tag(RecipeSelection.lunch)
-                
-                Text("Fourth Screen")
-                    .tag(RecipeSelection.dinner)
-                
-                Text("Fifth Screen")
-                    .tag(RecipeSelection.dessert)
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .onChange(of: tabSelection) { _, newValue in
-                withAnimation(.spring) {
-                    recipeSelection = newValue
-                    recipeSelectionViewScrollTarget = newValue
+                TabView(selection: $tabSelection) {
+                    AllRecipesView()
+                        .tag(RecipeSelection.allRecipes)
+                    
+                    BreakfastView()
+                        .tag(RecipeSelection.breakfast)
+                    
+                    LunchView()
+                        .tag(RecipeSelection.lunch)
+                    
+                    DinnerView()
+                        .tag(RecipeSelection.dinner)
+                    
+                    DessertView()
+                        .tag(RecipeSelection.dessert)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .onChange(of: tabSelection) { _, newValue in
+                    withAnimation(.spring) {
+                        recipeSelection = newValue
+                        recipeSelectionViewScrollTarget = newValue
+                    }
+                }
+                .onChange(of: recipeSelection) { _, newValue in
+                    withAnimation {
+                        tabSelection = newValue
+                    }
                 }
             }
-            .onChange(of: recipeSelection) { _, newValue in
-                withAnimation {
-                    tabSelection = newValue
-                }
-            }
+            .padding(.top, 4)
         }
     }
 }
