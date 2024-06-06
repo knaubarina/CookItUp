@@ -14,7 +14,6 @@
 		E79B6F3B2C0A48BD00C7274C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B6F3A2C0A48BD00C7274C /* OnboardingView.swift */; };
 		E7A37E862C08A378005D3238 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E852C08A378005D3238 /* Typography.swift */; };
 		E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A37E892C08A73F005D3238 /* TypographyModifier.swift */; };
-		E7ACF0842C0DD6E7000A8B4F /* RecipeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACF0832C0DD6E7000A8B4F /* RecipeSegmentedControl.swift */; };
 		E7ACF0892C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */; };
 		E7ACF08B2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACF08A2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift */; };
 		E7AEB4A22C10BE0D00AA3FB2 /* RecipeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AEB4A12C10BE0D00AA3FB2 /* RecipeSelectionView.swift */; };
@@ -42,7 +41,6 @@
 		E79B6F3A2C0A48BD00C7274C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E7A37E852C08A378005D3238 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		E7A37E892C08A73F005D3238 /* TypographyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyModifier.swift; sourceTree = "<group>"; };
-		E7ACF0832C0DD6E7000A8B4F /* RecipeSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSegmentedControl.swift; sourceTree = "<group>"; };
 		E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSegmentedControlFilter.swift; sourceTree = "<group>"; };
 		E7ACF08A2C0E4BA4000A8B4F /* TertiaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryButtonStyle.swift; sourceTree = "<group>"; };
 		E7AEB4A12C10BE0D00AA3FB2 /* RecipeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSelectionView.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				E7ACF0882C0E3A57000A8B4F /* RecipeSegmentedControlFilter.swift */,
 				E7AEB4A12C10BE0D00AA3FB2 /* RecipeSelectionView.swift */,
-				E7ACF0832C0DD6E7000A8B4F /* RecipeSegmentedControl.swift */,
 			);
 			path = RecipeSegmenedControl;
 			sourceTree = "<group>";
@@ -468,7 +465,6 @@
 				E7C42AB42C0CC1BC0099B5B0 /* RecipeCardInfoView.swift in Sources */,
 				E7A37E8A2C08A73F005D3238 /* TypographyModifier.swift in Sources */,
 				E7C42AB22C0CC18B0099B5B0 /* RecipeCardImageView.swift in Sources */,
-				E7ACF0842C0DD6E7000A8B4F /* RecipeSegmentedControl.swift in Sources */,
 				E7A37E862C08A378005D3238 /* Typography.swift in Sources */,
 				E7E868372C0CFBFF009B211D /* SearchView.swift in Sources */,
 				E7AEB4A22C10BE0D00AA3FB2 /* RecipeSelectionView.swift in Sources */,

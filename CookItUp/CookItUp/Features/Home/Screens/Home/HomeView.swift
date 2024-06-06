@@ -3,27 +3,44 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var recipeSelection: RecipeSelection = .allRecipes
+    @State private var tabSelection: RecipeSelection = .allRecipes
+    @State private var recipeSelectionViewScrollTarget: RecipeSelection = .allRecipes
+    
     var body: some View {
-        NavigationStack {
-            RecipeSegmentedControl()
-            ZStack(alignment: .bottom) {
-                ScrollView {
-                    LazyVStack(alignment: .center, spacing: 16) {
-                        ForEach(1...5, id: \.self) { listing in
-                            RecipeCardView()
-                        }
-                    }
-                    .padding(.top, 12)
-                    .padding(.bottom, 80)
-                }
+        VStack {
+            RecipeSelectionView(
+                recipeSelection: $recipeSelection,
+                scrollTarget: $recipeSelectionViewScrollTarget
+            )
+            
+            TabView(selection: $tabSelection) {
+                Text("First Screen")
+                    .tag(RecipeSelection.allRecipes)
                 
-                Button {
-                    // add recipe logic
-                } label: {
-                    Text("Add +")
+                Text("Second Screen")
+                    .tag(RecipeSelection.breakfast)
+                
+                Text("Third Screen")
+                    .tag(RecipeSelection.lunch)
+                
+                Text("Fourth Screen")
+                    .tag(RecipeSelection.dinner)
+                
+                Text("Fifth Screen")
+                    .tag(RecipeSelection.dessert)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .onChange(of: tabSelection) { _, newValue in
+                withAnimation(.spring) {
+                    recipeSelection = newValue
+                    recipeSelectionViewScrollTarget = newValue
                 }
-                .buttonStyle(.tertiary)
-                .padding()
+            }
+            .onChange(of: recipeSelection) { _, newValue in
+                withAnimation {
+                    tabSelection = newValue
+                }
             }
         }
     }
