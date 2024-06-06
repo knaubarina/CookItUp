@@ -1,0 +1,6 @@
+include:
+- path: xcodegen/CookItUp.yml
+  relativePaths: false
+name: CookItUp
+targets:
+  CookItUp: {}

@@ -1,0 +1,24 @@
+name: CookItUp
+options:
+   bundleIdPrefix: dk.cookitup.app
+   developmentLanguage: en
+   useBaseInternationalization: false
+configs:
+  Debug: debug
+  Release: release
+settings:
+   base:
+     CURRENT_PROJECT_VERSION: 1
+     VERSIONING_SYSTEM: "apple-generic"
+targets:
+  CookItUp:
+     type: application
+     platform: iOS
+     deploymentTarget: "17.0"
+     sources: [CookItUp]
+     scheme:
+       targets:
+         CookItUp: all
+     configFiles:
+       Debug: CookItUp/XCConfigs/Debug.xcconfig
+       Release: CookItUp/XCConfigs/Release.xcconfig

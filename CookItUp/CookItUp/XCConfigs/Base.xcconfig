@@ -1,0 +1,29 @@
+// The TARGETED_DEVICE_FAMILY property specifies the targeted device family for the project.
+// In this case, the value '1' represents the iPhone family. It means that the project is intended to run on iPhones only.
+// The available values are: 1, 2, 3. These values represent iPhone, iPad, and Apple Watch families consequently.
+TARGETED_DEVICE_FAMILY = 1
+
+// The SUPPORTED_PLATFORMS property specifies the platforms on which the project can be built and run. It allows to define the target platforms for the project.
+// In this case, the value iphoneos iphonesimulator indicates that the project can be built and run on iOS devices (iPhone, iPad, iPod touch), and iOS Simulator.
+// The available values are: iphoneos, iphonesimulator, macosx, watchos, appletvos. These values indicate that the project can be built and run on iOS Devices, iOS Simulator, macOS, watchOS, and tvOS consequently.
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
+
+// The SUPPORTS_MACCATALYST property indicates that the project supports Mac Catalyst. It means that the project is designed to be compatible with the Mac platform and can be adapted to run on Macs using Mac Catalyst.
+SUPPORTS_MACCATALYST = NO
+
+// The SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD property indicated whether the project supports the Mac platform when the project is designed for iPhone and iPad.
+// Setting this property to YES means the project can also be run on Macs with Mac Catalyst when it is originally designed for iPhone and iPad.
+SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO
+
+// The DEBUG_INFORMATION_FORMAT property specifies the format of debug information generated during the build process.
+// In this case, the value dwarf-with-dsym means that there will be a separate file generated containing debug symbols, which can be used for debugging purposes.
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+// The OTHER_LDFLAGS specifies additional linker flags for the project.
+// In this case, -ObjC flag tells the linker to load all Objective-C classes and categories from the static libraries, even if they are not directly referenced.
+OTHER_LDFLAGS = -ObjC
+
+// The SWIFT_VERSION specifies the Swift language version for the project.
+SWIFT_VERSION = 5.0
+
+ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES

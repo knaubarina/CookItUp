@@ -1,0 +1,19 @@
+#include "Base.xcconfig"
+
+// The PRODUCT_BUNDLE_IDENTIFIER property sets the product bundle identifier for the project. It specifies a unique identifier for the app's bundle, which is used to uniquely identify the app in the device.
+PRODUCT_BUNDLE_IDENTIFIER = dk.CookItUp.app.release
+
+// The PRODUCT_NAME property sets the product name for the project.
+// In this case, it uses the $(TARGET_NAME) variable to refer to the target name and appends Debug to it.
+// The product name is typically used for display purposes.
+PRODUCT_NAME = $(TARGET_NAME)
+
+// The SWIFT_ACTIVE_COMPILATION_CONDITIONS property sets a Swift compiler flag to define the active compilation conditions.
+// In this case, it defines the condition DEBUG, which is commonly used to include debug-specific code or behaviour in the project.
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE
+
+// The CODE_SIGN_STYLE property specifies the code signing style for the project.
+// In this case, setting it to Automatic means Xcode will automatically handle the code signing process during the build.
+CODE_SIGN_STYLE = Automatic
+
+DEVELOPMENT_TEAM =
