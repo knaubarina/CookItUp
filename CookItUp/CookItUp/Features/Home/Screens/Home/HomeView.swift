@@ -8,7 +8,7 @@ struct HomeView: View {
     @State private var recipeSelectionViewScrollTarget: RecipeSelection = .allRecipes
     
     var body: some View {
-        NavigationStack {
+        ZStack(alignment: .bottom) {
             VStack {
                 RecipeSelectionView(
                     recipeSelection: $recipeSelection,
@@ -45,9 +45,18 @@ struct HomeView: View {
                 }
             }
             .padding(.top, 4)
+
+            Button {
+                // add recipe logic
+            } label: {
+                Text("Add +")
+            }
+            .buttonStyle(.tertiary)
+            .padding(.bottom, 16)
         }
     }
 }
+
 
 #Preview {
     HomeView()

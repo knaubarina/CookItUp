@@ -16,9 +16,10 @@ struct RecipeCardImageView: View {
                 startPoint: .top,
                 endPoint: .bottom
             )
+            
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Popular")
+                    Text("Breakfast")
                         .typography(.caption3)
                         .padding(.vertical, 4)
                         .padding(.horizontal, 10)
@@ -40,6 +41,7 @@ struct RecipeCardImageView: View {
             }
             .padding()
         }
+        .frame(height: 219)
     }
 }
 

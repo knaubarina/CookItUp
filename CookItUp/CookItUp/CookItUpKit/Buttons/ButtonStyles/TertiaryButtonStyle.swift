@@ -11,6 +11,7 @@ struct TertiaryButtonStyle: ButtonStyle {
             .background(configuration.isPressed ? .primary01 : .primary02)
             .clipShape(RoundedRectangle(cornerRadius: 28))
             .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
+            .sensoryFeedback(.impact(flexibility: .soft, intensity: 0.5), trigger: configuration.isPressed)
     }
 }
 
