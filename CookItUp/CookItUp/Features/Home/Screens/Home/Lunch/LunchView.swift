@@ -5,14 +5,17 @@ import SwiftUI
 struct LunchView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 16) {
+            LazyVStack(spacing: 16) {
                 ForEach(1...10, id: \.self) { recipe in
-                    RecipeCardView()
+                    NavigationLink(value: recipe) {
+                        RecipeCardView()
+                    }
+                    .buttonStyle(.interactable)
                 }
             }
+            .safeAreaPadding(.top, 16)
+            .safeAreaPadding(.bottom, 80)
         }
-        .safeAreaPadding(.top, 16)
-        .safeAreaPadding(.bottom, 80)
     }
 }
 

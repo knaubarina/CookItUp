@@ -15,6 +15,7 @@ struct SecondaryButtonStyle: ButtonStyle {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(configuration.isPressed ? .primary03.opacity(0.5) : .primary03)
             )
+            .sensoryFeedback(.impact(flexibility: .soft, intensity: 0.5), trigger: configuration.isPressed)
     }
 }
 
