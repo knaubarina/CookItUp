@@ -1,9 +1,11 @@
 //  Created by Arina Knaub on 29/05/2024.
 
+import FirebaseCore
 import SwiftUI
 
 @main
 struct CookItUpApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @AppStorage("didFinishOnboarding") var didFinishOnboarding = false
     
     var body: some Scene {

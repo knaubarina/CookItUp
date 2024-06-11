@@ -10,6 +10,10 @@ settings:
    base:
      CURRENT_PROJECT_VERSION: 1
      VERSIONING_SYSTEM: "apple-generic"
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk.git
+    from: 10.27.0
 targets:
   CookItUp:
      type: application
@@ -22,3 +26,9 @@ targets:
      configFiles:
        Debug: CookItUp/XCConfigs/Debug.xcconfig
        Release: CookItUp/XCConfigs/Release.xcconfig
+     dependencies:
+       - package: Firebase
+         product: FirebaseFirestore
+       - package: Firebase
+         product: FirebaseFirestoreSwift
+  
