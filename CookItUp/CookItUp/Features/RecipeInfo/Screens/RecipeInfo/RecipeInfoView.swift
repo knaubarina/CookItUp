@@ -3,29 +3,32 @@
 import SwiftUI
 
 struct RecipeInfoView: View {
-    private let images = ["recipePicture-1", "recipePicture-2", "step-1", "step-2", "step-3", "step-4", "step-5", "step-6"]
+    
+    enum CoordinateSpaces {
+        case scrollView
+    }
     
     var body: some View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
-                TabView {
-                    ForEach(images, id: \.self) { image in
-                        Image(image)
-                            .resizable()
-                            .scaledToFill()
-                            .overlay(
-                                Rectangle()
-                                    .opacity(0.15)
-                            )
-                    }
+                ParallaxHeader(
+                    coordinateSpace: CoordinateSpaces.scrollView,
+                    defaultHeight: 300
+                ) {
+                    Image(.step2)
+                        .resizable()
+                        .scaledToFill()
+                        .overlay(
+                            Rectangle()
+                                .opacity(0.15)
+                        )
                 }
-                .frame(height: 300)
-                .tabViewStyle(.page)
                 
                 VStack(alignment: .leading, spacing: 24) {
                     RecipeInfoTitleView()
                     RecipeCardInfoView()
                         .frame(height: 40)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                         .shadow(color: .neutral05.opacity(0.04), radius: 4, y: 4)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
@@ -44,13 +47,14 @@ struct RecipeInfoView: View {
                 .padding(.top, 4)
                 .padding(.horizontal)
             }
+            .coordinateSpace(.named(CoordinateSpaces.scrollView))
             
             ZStack(alignment: .top) {
                 Rectangle()
                     .frame(height: 90)
                     .foregroundStyle(.neutral01)
                     .overlay(Divider().background(.neutral02), alignment: .top)
-                    
+                
                 Button("Let's Cook!") {
                     // let's cook logic
                 }
