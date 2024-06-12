@@ -3,12 +3,14 @@
 import SwiftUI
 
 struct LunchView: View {
+    let recipes: [Recipe]
+    
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(1...10, id: \.self) { recipe in
+                ForEach(recipes) { recipe in
                     NavigationLink(value: recipe) {
-                        RecipeCardView()
+                        RecipeCardView(recipe: recipe)
                     }
                     .buttonStyle(.interactable)
                 }
@@ -20,5 +22,5 @@ struct LunchView: View {
 }
 
 #Preview {
-    LunchView()
+    LunchView(recipes: [Recipe.mockRecipe])
 }

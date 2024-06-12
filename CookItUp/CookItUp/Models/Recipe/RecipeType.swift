@@ -2,7 +2,7 @@
 
 import Foundation
 
-enum RecipeType: String {
+enum RecipeType: String, Codable, Hashable {
     case breakfast = "Breakfast"
     case lunch = "Lunch"
     case dinner = "Dinner"

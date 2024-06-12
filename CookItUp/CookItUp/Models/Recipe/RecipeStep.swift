@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct RecipeStep {
+struct RecipeStep: Codable, Hashable {
     let imageURL: String
     let description: String
 }

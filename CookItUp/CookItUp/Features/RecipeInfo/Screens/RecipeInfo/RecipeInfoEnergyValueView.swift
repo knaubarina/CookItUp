@@ -3,6 +3,8 @@
 import SwiftUI
 
 struct RecipeInfoEnergyValueView: View {
+    let recipe: Recipe
+    
     var body: some View {
         HStack(spacing: 16) {
             Image(.energyValue)
@@ -13,7 +15,7 @@ struct RecipeInfoEnergyValueView: View {
                 Text("Energy Value Per Serving")
                     .typography(.headline)
                     .foregroundStyle(.neutral05)
-                Text("Proteins: 42 g |  Fats: 61 g  |  Carbs: 56 g")
+                Text("Proteins: \(recipe.energyValue.proteins) g |  Fats: \(recipe.energyValue.fats) g  |  Carbs: \(recipe.energyValue.carbs) g")
                     .typography(.subheadline2)
                     .foregroundStyle(.neutral03)
             }
@@ -22,5 +24,5 @@ struct RecipeInfoEnergyValueView: View {
 }
 
 #Preview {
-    RecipeInfoEnergyValueView()
+    RecipeInfoEnergyValueView(recipe: Recipe.mockRecipe)
 }

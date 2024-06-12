@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct Ingredient {
+struct Ingredient: Codable, Hashable {
     let name: String
     let value: Int
     let unit: String

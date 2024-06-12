@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct EnergyValue {
+struct EnergyValue: Codable, Hashable {
     let calories: Int
     let proteins: Int
     let fats: Int

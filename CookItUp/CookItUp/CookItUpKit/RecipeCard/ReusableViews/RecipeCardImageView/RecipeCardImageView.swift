@@ -3,6 +3,8 @@
 import SwiftUI
 
 struct RecipeCardImageView: View {
+    let recipe: Recipe
+    
     var body: some View {
         ZStack(alignment: .top) {
             Image(.recipePicture1)
@@ -19,7 +21,7 @@ struct RecipeCardImageView: View {
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text("Breakfast")
+                    Text(recipe.recipeType.rawValue)
                         .typography(.caption3)
                         .padding(.vertical, 4)
                         .padding(.horizontal, 10)
@@ -35,7 +37,7 @@ struct RecipeCardImageView: View {
                 
                 Spacer()
                 
-                Text("Cottage Cheese Pancakes With Berries & Sour Cream")
+                Text(recipe.name)
                     .typography(.heading2)
                     .foregroundStyle(.neutral01)
             }
@@ -46,5 +48,5 @@ struct RecipeCardImageView: View {
 }
 
 #Preview {
-    RecipeCardImageView()
+    RecipeCardImageView(recipe: Recipe.mockRecipe)
 }
