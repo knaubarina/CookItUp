@@ -3,9 +3,11 @@
 import SwiftUI
 
 struct ShareButton: View {
+    @Binding var toast: Toast?
+    
     var body: some View {
         Button {
-            // share recipe logic
+            toast = Toast(style: .linkCopied, message: "Link copied")
         } label: {
             Image(.share)
                 .resizable()
@@ -17,5 +19,5 @@ struct ShareButton: View {
 }
 
 #Preview {
-    ShareButton()
+    ShareButton(toast: .constant(.none))
 }

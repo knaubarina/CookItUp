@@ -4,6 +4,8 @@ import SwiftUI
 
 struct RecipeInfoView: View {
     let recipe: Recipe
+    @State private var toast: Toast? = nil
+    
     enum CoordinateSpaces {
         case scrollView
     }
@@ -68,11 +70,12 @@ struct RecipeInfoView: View {
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
                 HStack(spacing: 16) {
-                    ShareButton()
+                    ShareButton(toast: $toast)
                     FavouriteButton()
                 }
             }
         }
+        .toastView(toast: $toast)
     }
 }
 
