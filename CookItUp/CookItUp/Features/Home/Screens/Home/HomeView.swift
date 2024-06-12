@@ -6,6 +6,7 @@ struct HomeView: View {
     @State private var recipeSelection: RecipeSelection = .allRecipes
     @State private var tabSelection: RecipeSelection = .allRecipes
     @State private var recipeSelectionViewScrollTarget: RecipeSelection = .allRecipes
+    @State private var homeViewModel = HomeViewModel()
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -16,19 +17,19 @@ struct HomeView: View {
                 )
                 
                 TabView(selection: $tabSelection) {
-                    AllRecipesView()
+                    AllRecipesView(recipes: homeViewModel.allRecipes)
                         .tag(RecipeSelection.allRecipes)
                     
-                    BreakfastView()
+                    BreakfastView(recipes: homeViewModel.breakfastRecipes)
                         .tag(RecipeSelection.breakfast)
                     
-                    LunchView()
+                    LunchView(recipes: homeViewModel.lunchRecipes)
                         .tag(RecipeSelection.lunch)
                     
-                    DinnerView()
+                    DinnerView(recipes: homeViewModel.dinnerRecipes)
                         .tag(RecipeSelection.dinner)
                     
-                    DessertView()
+                    DessertView(recipes: homeViewModel.dessertRecipes)
                         .tag(RecipeSelection.dessert)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
@@ -53,6 +54,15 @@ struct HomeView: View {
             }
             .buttonStyle(.tertiary)
             .padding(.bottom, 16)
+        }
+        .onAppear {
+            Task {
+                do {
+                    try await homeViewModel.getRecipes()
+                } catch {
+                    // Handle error
+                }
+            }
         }
     }
 }

@@ -3,7 +3,6 @@
 import SwiftUI
 
 struct TabBarView: View {
-    
     @State private var currentSelection: TabBarItem = .home
     
     var body: some View {
@@ -33,8 +32,8 @@ struct TabBarView: View {
                     }
                     .tag(TabBarItem.profile)
             }
-            .navigationDestination(for: Int.self) { recipe in
-                RecipeInfoView()
+            .navigationDestination(for: Recipe.self) { recipe in
+                RecipeInfoView(recipe: recipe)
             }
         }
         .tint(.neutral01)

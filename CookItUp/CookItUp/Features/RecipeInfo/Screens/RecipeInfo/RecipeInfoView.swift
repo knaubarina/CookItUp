@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct RecipeInfoView: View {
-    
+    let recipe: Recipe
     enum CoordinateSpaces {
         case scrollView
     }
@@ -25,8 +25,8 @@ struct RecipeInfoView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 24) {
-                    RecipeInfoTitleView()
-                    RecipeCardInfoView()
+                    RecipeInfoTitleView(recipe: recipe)
+                    RecipeCardInfoView(recipe: recipe)
                         .frame(height: 40)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                         .shadow(color: .neutral05.opacity(0.04), radius: 4, y: 4)
@@ -36,7 +36,7 @@ struct RecipeInfoView: View {
                         )
                     RecipeInfoIngredientsView()
                     Divider()
-                    RecipeInfoEnergyValueView()
+                    RecipeInfoEnergyValueView(recipe: recipe)
                     
                     Button("Edit Recipe") {
                         // edit recipe logic
@@ -77,5 +77,5 @@ struct RecipeInfoView: View {
 }
 
 #Preview {
-    RecipeInfoView()
+    RecipeInfoView(recipe: Recipe.mockRecipe)
 }

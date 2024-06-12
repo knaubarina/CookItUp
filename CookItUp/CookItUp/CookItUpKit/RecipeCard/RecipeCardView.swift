@@ -3,10 +3,12 @@
 import SwiftUI
 
 struct RecipeCardView: View {
+    let recipe: Recipe
+    
     var body: some View {
         VStack(spacing: 0) {
-            RecipeCardImageView()
-            RecipeCardInfoView()
+            RecipeCardImageView(recipe: recipe)
+            RecipeCardInfoView(recipe: recipe)
         }
         .frame(height: 259)
         .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -17,5 +19,5 @@ struct RecipeCardView: View {
 }
 
 #Preview {
-    RecipeCardView()
+    RecipeCardView(recipe: Recipe.mockRecipe)
 }

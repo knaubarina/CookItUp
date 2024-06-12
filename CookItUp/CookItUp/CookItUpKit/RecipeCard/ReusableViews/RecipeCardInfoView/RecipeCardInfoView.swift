@@ -3,13 +3,15 @@
 import SwiftUI
 
 struct RecipeCardInfoView: View {
+    let recipe: Recipe
+    
     var body: some View {
         HStack(spacing: 12) {
             HStack(spacing: 8) {
                 Image(.timer)
                     .resizable()
                     .frame(width: 16, height: 16)
-                Text("30 min")
+                Text("\(recipe.cookingTime) min")
                     .typography(.caption3)
             }
             
@@ -20,7 +22,7 @@ struct RecipeCardInfoView: View {
                 Image(.complexity)
                     .resizable()
                     .frame(width: 16, height: 16)
-                Text("Easy")
+                Text(recipe.complexity.rawValue)
                     .typography(.caption3)
             }
             
@@ -31,7 +33,7 @@ struct RecipeCardInfoView: View {
                 Image(.servings)
                     .resizable()
                     .frame(width: 16, height: 16)
-                Text("2 sv")
+                Text("\(recipe.servingsNumber) sv")
                     .typography(.caption3)
             }
             
@@ -42,7 +44,7 @@ struct RecipeCardInfoView: View {
                 Image(.calories)
                     .resizable()
                     .frame(width: 16, height: 16)
-                Text("938 Cal")
+                Text("\(recipe.energyValue.calories) Cal")
                     .typography(.caption3)
             }
         }
@@ -52,5 +54,5 @@ struct RecipeCardInfoView: View {
 }
 
 #Preview {
-    RecipeCardInfoView()
+    RecipeCardInfoView(recipe: Recipe.mockRecipe)
 }

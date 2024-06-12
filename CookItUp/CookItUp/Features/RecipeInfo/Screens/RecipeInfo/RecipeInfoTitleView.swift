@@ -3,12 +3,14 @@
 import SwiftUI
 
 struct RecipeInfoTitleView: View {
+    let recipe: Recipe
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Cottage Cheese Pancakes With Berries & Sour Cream")
+            Text(recipe.name)
                 .typography(.title)
             
-            Text("The main secret of perfect cottage cheese pancakes is to strain the quark, ensuring a smoother texture and removing excess moisture. This process enhances the fluffiness of the pancakes and prevents them from becoming too dense.")
+            Text(recipe.description)
                 .typography(.body2)
         }
         .foregroundStyle(.neutral05)
@@ -16,5 +18,5 @@ struct RecipeInfoTitleView: View {
 }
 
 #Preview {
-    RecipeInfoTitleView()
+    RecipeInfoTitleView(recipe: Recipe.mockRecipe)
 }
