@@ -4,7 +4,7 @@ import Foundation
 import FirebaseFirestore
 
 final class NetworkingServiceLive: NetworkingService {
-    let database = Firestore.firestore()
+    private let database = Firestore.firestore()
     
     func getRecipes() async throws -> [Recipe] {
         do {
