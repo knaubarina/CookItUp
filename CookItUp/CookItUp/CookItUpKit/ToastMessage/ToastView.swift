@@ -5,7 +5,6 @@ import SwiftUI
 struct ToastView: View {
     var style: ToastStyle
     var message: String
-    var width = CGFloat.infinity
     var onCancelTapped: (() -> Void)
     
     var body: some View {
@@ -24,8 +23,8 @@ struct ToastView: View {
             .buttonStyle(.interactable)
         }
         .padding()
-        .frame(minWidth: 0, maxWidth: width)
-//        .frame(height: 54)
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(height: 54)
         .background(.neutral01)
         .clipShape(RoundedRectangle(cornerRadius: 8))
         .overlay(

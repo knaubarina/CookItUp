@@ -65,6 +65,7 @@ struct RecipeInfoView: View {
             }
         }
         .ignoresSafeArea()
+        .toastView(toast: $toast)
         .toolbar(.hidden, for: .tabBar)
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
@@ -75,7 +76,6 @@ struct RecipeInfoView: View {
                 }
             }
         }
-        .toastView(toast: $toast)
     }
 }
 
